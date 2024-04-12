@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Se revisa si se proporciona un argumento
+# Se revisa si lo recibido es un argumento
 if [ $# -ne 1 ]; then
     echo "Uso: $0 <ID del proceso>"
     exit 1
@@ -24,7 +24,7 @@ pid=$(ps -o pid= -p $pid)
 # 3) Parent process ID
 ppid=$(ps -o ppid= -p $pid)
 
-# 4) Usuario propietario
+# 4) Usuario al que le pertenece
 user=$(ps -o user= -p $pid)
 
 # 5) Porcentaje de uso de CPU al momento de correr el script
