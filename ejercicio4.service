@@ -1,0 +1,11 @@
+[Unit]
+Description=Servicio de Monitoreo de Cambios en Directorios
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/jean/Lab2_Code/ejercicio4.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
