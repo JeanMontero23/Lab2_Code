@@ -1,13 +1,21 @@
 #!/bin/bash
 
-# Este es un script de prueba que consume recursos
-# Simula un proceso intensivo en CPU y memoria
+# Script de prueba para el monitoreo de CPU y memoria
 
-# Número total de iteraciones del bucle
-total_iterations=10
-
-# Bucle para simular un proceso intensivo en CPU y memoria
-for ((i = 0; i < $total_iterations; i++)); do
-    echo "Hola, esto es una prueba"
+# Consumo de CPU
+echo "Consumiendo CPU..."
+for (( i=0; i<100000000; i++ )); do
+    :
 done
+
+# Consumo de memoria
+echo "Consumiendo memoria..."
+arr=()
+for (( i=0; i<1000000; i++ )); do
+    arr+=($i)
+done
+
+exit 0
+
+echo "Proceso de prueba completado."
 
